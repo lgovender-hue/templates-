@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claim Cancellation Notice</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .email-wrapper {
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 24px 16px;
+      }
+
+      .email-container {
+        width: 600px;
+        max-width: 600px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        margin: 0 auto;
+      }
+
+      .header-image img {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        border: 0;
+      }
+
+      .content {
+        padding: 32px 40px 24px;
+      }
+
+      .greeting {
+        font-size: 15px;
+        color: #333333;
+        margin: 0 0 24px;
+      }
+
+      .body-text {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.7;
+        margin: 0 0 12px;
+      }
+
+      .button-container {
+        padding: 0 40px 32px;
+        text-align: center;
+      }
+
+      .button-link {
+        display: inline-block;
+        background-color: #1b4b5a;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 14px 32px;
+        border-radius: 6px;
+      }
+
+      .signature {
+        font-size: 14px;
+        color: #333333;
+        margin: 0 0 8px;
+      }
+
+      .reference-box {
+        background-color: #f7f9fa;
+        border: 1px solid #dde5e8;
+        border-radius: 6px;
+        padding: 16px;
+        margin-top: 24px;
+      }
+
+      .reference-text {
+        font-size: 14px;
+        color: #1b4b5a;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .automated-notice {
+        font-size: 12px;
+        color: #888888;
+        font-style: italic;
+        margin-top: 24px;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #dddddd;
+        margin: 0 40px;
+      }
+
+      .footer {
+        padding: 16px 40px 24px;
+      }
+
+      .footer-text {
+        font-size: 11px;
+        color: #888888;
+        line-height: 1.6;
+        text-align: center;
+        margin: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+        }
+
+        .content,
+        .footer,
+        .button-container {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+
+        .button-link {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table
+      class="email-wrapper"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+    >
+      <tr>
+        <td align="center">
+          <table
+            class="email-container"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+          >
+            <!-- Header Image -->
+            <tr>
+              <td class="header-image">
+                <img src="./email-header.png" alt="Net Cross Header" />
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td class="content">
+                <p class="greeting">Dear Policyholder,</p>
+
+                <p class="body-text">
+                  We refer to your claim with reference number
+                  <strong>123456789101223</strong>.
+                </p>
+
+                <p class="body-text">
+                  Our records indicate that additional supporting documentation
+                  was requested to continue processing your claim.
+                  Unfortunately, the required documents have not been received
+                  within the allowed period of <strong>180 days</strong>.
+                </p>
+
+                <p class="body-text">
+                  As a result, your claim has been classified as abandoned and
+                  has now been cancelled in accordance with our claims
+                  processing requirements.
+                </p>
+
+                <p class="body-text">
+                  If you believe this cancellation has been made in error,
+                  require further information, or have any queries regarding
+                  your claim, please contact the Claims Department using the
+                  button below.
+                </p>
+
+                <p class="body-text">
+                  Thank you for your attention to this matter.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Contact Claims Button -->
+            <tr>
+              <td class="button-container">
+                <a
+                  href="https://www.example.com/claims/contact/{{claimId}}"
+                  target="_blank"
+                  class="button-link"
+                >
+                  Contact Claims Department
+                </a>
+              </td>
+            </tr>
+
+            <!-- Signature -->
+            <tr>
+              <td class="content">
+                <p class="signature">Kind regards,</p>
+
+                <p class="signature">
+                  <strong>Claims Department</strong>
+                </p>
+
+                <div class="reference-box">
+                  <p class="reference-text">
+                    Claim Reference Number: 123456789101223
+                  </p>
+                </div>
+
+                <p class="automated-notice">
+                  This is an automated system-generated notification. Please do
+                  not reply directly to this email.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td>
+                <hr class="divider" />
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td class="footer">
+                <p class="footer-text">
+                  Net Cross Solutions (Pty) Ltd, 76 Maude Street, Corner West
+                  Street, Sandton, South Africa, Tel: +27 (0)11 301 0000
+                  <br /><br />
+                  Underwritten by The Hollard Insurance Company Limited (Reg No.
+                  1952/003004/06), a Licensed Non-Life Insurer and an authorised
+                  Financial Services Provider. Net Cross Solutions (Pty) Ltd is
+                  an authorised Financial Services Provider.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

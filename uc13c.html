@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supervisor Review Required</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .email-wrapper {
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 24px 16px;
+      }
+
+      .email-container {
+        width: 600px;
+        max-width: 600px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        margin: 0 auto;
+      }
+
+      .header-image img {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        border: 0;
+      }
+
+      .content {
+        padding: 32px 40px 24px;
+      }
+
+      .greeting {
+        font-size: 15px;
+        color: #333333;
+        margin: 0 0 24px;
+      }
+
+      .body-text {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.7;
+        margin: 0 0 12px;
+      }
+
+      .button-container {
+        padding: 0 40px 32px;
+        text-align: center;
+      }
+
+      .button-link {
+        display: inline-block;
+        background-color: #1b4b5a;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 14px 32px;
+        border-radius: 6px;
+      }
+
+      .issue-box {
+        background-color: #f7f9fa;
+        border: 1px solid #dde5e8;
+        border-radius: 6px;
+        padding: 16px;
+        margin: 20px 0;
+      }
+
+      .issue-title {
+        font-size: 14px;
+        font-weight: bold;
+        color: #1b4b5a;
+        margin: 0 0 10px;
+      }
+
+      .issue-text {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .reference-box {
+        background-color: #f7f9fa;
+        border: 1px solid #dde5e8;
+        border-radius: 6px;
+        padding: 16px;
+        margin-top: 24px;
+      }
+
+      .reference-text {
+        font-size: 14px;
+        color: #1b4b5a;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .signature {
+        font-size: 14px;
+        color: #333333;
+        margin: 0 0 8px;
+      }
+
+      .automated-notice {
+        font-size: 12px;
+        color: #888888;
+        font-style: italic;
+        margin-top: 24px;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #dddddd;
+        margin: 0 40px;
+      }
+
+      .footer {
+        padding: 16px 40px 24px;
+      }
+
+      .footer-text {
+        font-size: 11px;
+        color: #888888;
+        line-height: 1.6;
+        text-align: center;
+        margin: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+        }
+
+        .content,
+        .footer,
+        .button-container {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+
+        .button-link {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table
+      class="email-wrapper"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+    >
+      <tr>
+        <td align="center">
+          <table
+            class="email-container"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+          >
+            <!-- Header Image -->
+            <tr>
+              <td class="header-image">
+                <img src="./email-header.png" alt="Net Cross Header" />
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td class="content">
+                <p class="greeting">Dear Supervisor,</p>
+
+                <p class="body-text">
+                  A claim was identified during the assessment process and
+                  submitted to the Business Rules Engine for further evaluation.
+                </p>
+
+                <p class="body-text">
+                  The Business Rules Engine review has now been completed and
+                  the claim is awaiting Supervisor review and final decision.
+                </p>
+
+                <p class="body-text">
+                  <strong>Assessment Date:</strong>
+                  06/12/2026
+                </p>
+
+                <p class="body-text">
+                  To review the assessment findings and record your decision,
+                  please access the Claims Portal using the button below.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Review Claim Button -->
+            <tr>
+              <td class="button-container">
+                <a
+                  href="https://portal.netcross.co.za/claims/{{claimId}}/review"
+                  target="_blank"
+                  class="button-link"
+                >
+                  Review and Decide Claim
+                </a>
+              </td>
+            </tr>
+
+            <!-- Business Rules Outcome -->
+            <tr>
+              <td class="content">
+                <div class="issue-box">
+                  <p class="issue-title">Business Rules Outcome</p>
+
+                  <p class="issue-text">
+                    The following issue was identified during the assessment
+                    process and triggered a Business Rules Engine review:
+                    <br /><br />
+                    <strong> Pending approval </strong>
+                  </p>
+                </div>
+
+                <p class="body-text">
+                  Please review the claim details, supporting documentation,
+                  assessment findings, and the outcome of the Business Rules
+                  Engine review.
+                </p>
+
+                <p class="body-text">
+                  Once your review has been completed, you are required to
+                  determine whether the claim should be approved or rejected.
+                </p>
+
+                <p class="body-text">
+                  Your decision will determine the next stage of the claims
+                  process and the appropriate communication that will be sent to
+                  the policyholder.
+                </p>
+
+                <p class="body-text">
+                  Claims requiring additional investigation or clarification
+                  should be handled in accordance with standard claims
+                  management procedures.
+                </p>
+
+                <p class="signature">Kind regards,</p>
+
+                <p class="signature">
+                  <strong>Claims Processing System</strong>
+                </p>
+
+                <div class="reference-box">
+                  <p class="reference-text">
+                    Claim Reference Number: 123456789101223
+                  </p>
+                </div>
+
+                <p class="automated-notice">
+                  This is an automated notification generated by the Claims
+                  Processing System.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td>
+                <hr class="divider" />
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td class="footer">
+                <p class="footer-text">
+                  Net Cross Solutions (Pty) Ltd, 76 Maude Street, Corner West
+                  Street, Sandton, South Africa, Tel: +27 (0)11 301 0000
+                  <br /><br />
+                  Underwritten by The Hollard Insurance Company Limited (Reg No.
+                  1952/003004/06), a Licensed Non-Life Insurer and an authorised
+                  Financial Services Provider. Net Cross Solutions (Pty) Ltd is
+                  an authorised Financial Services Provider.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claim Assessment Update</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .email-wrapper {
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 24px 16px;
+      }
+
+      .email-container {
+        width: 600px;
+        max-width: 600px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        margin: 0 auto;
+      }
+
+      .header-image img {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        border: 0;
+      }
+
+      .content {
+        padding: 32px 40px 24px;
+      }
+
+      .greeting {
+        font-size: 15px;
+        color: #333333;
+        margin: 0 0 24px;
+      }
+
+      .body-text {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.7;
+        margin: 0 0 12px;
+      }
+
+      .button-container {
+        padding: 0 40px 32px;
+        text-align: center;
+      }
+
+      .button-link {
+        display: inline-block;
+        background-color: #1b4b5a;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 14px 32px;
+        border-radius: 6px;
+      }
+
+      .reference-box {
+        background-color: #f7f9fa;
+        border: 1px solid #dde5e8;
+        border-radius: 6px;
+        padding: 16px;
+        margin-top: 24px;
+      }
+
+      .reference-text {
+        font-size: 14px;
+        color: #1b4b5a;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .signature {
+        font-size: 14px;
+        color: #333333;
+        margin: 0 0 8px;
+      }
+
+      .automated-notice {
+        font-size: 12px;
+        color: #888888;
+        font-style: italic;
+        margin-top: 24px;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #dddddd;
+        margin: 0 40px;
+      }
+
+      .footer {
+        padding: 16px 40px 24px;
+      }
+
+      .footer-text {
+        font-size: 11px;
+        color: #888888;
+        line-height: 1.6;
+        text-align: center;
+        margin: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+        }
+
+        .content,
+        .footer,
+        .button-container {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+
+        .button-link {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table
+      class="email-wrapper"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+    >
+      <tr>
+        <td align="center">
+          <table
+            class="email-container"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+          >
+            <!-- Header Image -->
+            <tr>
+              <td class="header-image">
+                <img src="./email-header.png" alt="Net Cross Header" />
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td class="content">
+                <p class="greeting">Dear <strong>Policyholder</strong>,</p>
+
+                <p class="body-text">
+                  We refer to your claim with reference number
+                  <strong>123456789101223</strong>.
+                </p>
+
+                <p class="body-text">
+                  Your claim assessment has been completed and is currently
+                  awaiting final review and approval by a Supervisor.
+                </p>
+
+                <p class="body-text">
+                  At this stage, no further action is required from you. Once
+                  the Supervisor has completed their review, the outcome of your
+                  claim will be communicated to you and your claim status will
+                  be updated accordingly.
+                </p>
+
+                <p class="body-text">
+                  To view the latest status of your claim and any related claim
+                  information, please access the Claims Portal using the button
+                  below.
+                </p>
+              </td>
+            </tr>
+
+            <!-- View Claim Status Button -->
+            <tr>
+              <td class="button-container">
+                <a
+                  href="https://portal.netcross.co.za/claims/{{claimId}}"
+                  target="_blank"
+                  class="button-link"
+                >
+                  View Claim Status
+                </a>
+              </td>
+            </tr>
+
+            <!-- Additional Content -->
+            <tr>
+              <td class="content">
+                <p class="body-text">
+                  You may continue to monitor your claim through the Claims
+                  Portal while the Supervisor review is in progress.
+                </p>
+
+                <p class="body-text">
+                  If you have any questions regarding your claim, please contact
+                  the Claims Department and quote your claim reference number.
+                </p>
+
+                <p class="body-text">
+                  Thank you for your patience and cooperation throughout the
+                  claims assessment process.
+                </p>
+
+                <p class="signature">Kind regards,</p>
+
+                <p class="signature">
+                  <strong>Claims Department</strong>
+                </p>
+
+                <div class="reference-box">
+                  <p class="reference-text">
+                    Claim Reference Number: 123456789101223
+                  </p>
+                </div>
+
+                <p class="automated-notice">
+                  This is an automated notification regarding your claim.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td>
+                <hr class="divider" />
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td class="footer">
+                <p class="footer-text">
+                  Net Cross Solutions (Pty) Ltd, 76 Maude Street, Corner West
+                  Street, Sandton, South Africa, Tel: +27 (0)11 301 0000
+                  <br /><br />
+                  Underwritten by The Hollard Insurance Company Limited (Reg No.
+                  1952/003004/06), a Licensed Non-Life Insurer and an authorised
+                  Financial Services Provider. Net Cross Solutions (Pty) Ltd is
+                  an authorised Financial Services Provider.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

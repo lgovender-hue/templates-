@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Additional Documentation Required</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .email-wrapper {
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 24px 16px;
+      }
+
+      .email-container {
+        width: 600px;
+        max-width: 600px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        margin: 0 auto;
+      }
+
+      .header-image img {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        border: 0;
+      }
+
+      .content {
+        padding: 32px 40px 24px;
+      }
+
+      .greeting {
+        font-size: 15px;
+        color: #333333;
+        margin: 0 0 24px;
+      }
+
+      .section-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #1b4b5a;
+        margin: 0 0 12px;
+      }
+
+      .body-text {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.7;
+        margin: 0 0 12px;
+      }
+
+      .document-list {
+        margin: 0 0 24px 20px;
+        padding: 0;
+      }
+
+      .document-list li {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.7;
+        margin-bottom: 8px;
+      }
+
+      .button-container {
+        padding: 0 40px 32px;
+        text-align: center;
+      }
+
+      .button-link {
+        display: inline-block;
+        background-color: #1b4b5a;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 14px 32px;
+        border-radius: 6px;
+      }
+
+      .claim-reference-box {
+        background-color: #f7f9fa;
+        border: 1px solid #dde5e8;
+        border-radius: 6px;
+        padding: 16px;
+        margin-top: 24px;
+      }
+
+      .claim-reference-text {
+        font-size: 14px;
+        color: #1b4b5a;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .signature {
+        font-size: 14px;
+        color: #333333;
+        margin: 0 0 8px;
+      }
+
+      .automated-notice {
+        font-size: 12px;
+        color: #888888;
+        font-style: italic;
+        margin-top: 24px;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #dddddd;
+        margin: 0 40px;
+      }
+
+      .footer {
+        padding: 16px 40px 24px;
+      }
+
+      .footer-text {
+        font-size: 11px;
+        color: #888888;
+        line-height: 1.6;
+        text-align: center;
+        margin: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+        }
+
+        .content,
+        .footer,
+        .button-container {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+
+        .button-link {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table
+      class="email-wrapper"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+    >
+      <tr>
+        <td align="center">
+          <table
+            class="email-container"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+          >
+            <!-- Header Image -->
+            <tr>
+              <td class="header-image">
+                <img src="./email-header.png" alt="Net Cross Header" />
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td class="content">
+                <p class="greeting">Dear Policyholder,</p>
+
+                <p class="body-text">
+                  We are currently reviewing your claim, referenced
+                  <strong>123456789101223</strong>.
+                </p>
+
+                <p class="body-text">
+                  During our assessment, we found that one or more of the
+                  submitted documents could not be processed or require an
+                  updated version before we can continue with the evaluation of
+                  your claim.
+                </p>
+
+                <p class="section-title">
+                  Please re-upload the following document(s):
+                </p>
+
+                <ul class="document-list">
+                  <li><strong>[Document 1]</strong> – Blurry</li>
+
+                  <li><strong>[Document 2]</strong> – Missing name field</li>
+
+                  <li><strong>[Document 3]</strong> – Missing doctor number</li>
+                </ul>
+
+                <p class="body-text">
+                  To avoid delays in processing your claim, please submit the
+                  requested document(s) at your earliest convenience using the
+                  claims portal.
+                </p>
+
+                <p class="body-text">
+                  Once the required documents have been received, your claim
+                  assessment will resume automatically.
+                </p>
+
+                <p class="body-text">
+                  If you require assistance or have any questions regarding the
+                  requested documentation, please contact our Claims Department.
+                </p>
+
+                <p class="body-text">Thank you for your cooperation.</p>
+              </td>
+            </tr>
+
+            <!-- Claims Portal Button -->
+            <tr>
+              <td class="button-container">
+                <a
+                  href="https://www.example.com/claims/documents/{{claimId}}"
+                  target="_blank"
+                  class="button-link"
+                >
+                  Upload Required Documents
+                </a>
+              </td>
+            </tr>
+
+            <!-- Signature -->
+            <tr>
+              <td class="content">
+                <p class="signature">Kind regards,</p>
+
+                <p class="signature">
+                  <strong>Claims Department</strong>
+                </p>
+
+                <div class="claim-reference-box">
+                  <p class="claim-reference-text">
+                    Claim Reference: 123456789101223
+                  </p>
+                </div>
+
+                <p class="automated-notice">
+                  This is an automated notification regarding your claim.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td>
+                <hr class="divider" />
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td class="footer">
+                <p class="footer-text">
+                  Net Cross Solutions (Pty) Ltd, 76 Maude Street, Corner West
+                  Street, Sandton, South Africa, Tel: +27 (0)11 301 0000
+                  <br /><br />
+                  Underwritten by The Hollard Insurance Company Limited (Reg No.
+                  1952/003004/06), a Licensed Non-Life Insurer and an authorised
+                  Financial Services Provider. Net Cross Solutions (Pty) Ltd is
+                  an authorised Financial Services Provider.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
