@@ -38,6 +38,11 @@
         padding: 32px 40px 24px;
       }
 
+      /* Reduced padding on the first content block after button */
+      .content-after-button {
+        padding: 0 40px 24px; /* Reduced top padding from 32px to 0 */
+      }
+
       .greeting {
         font-size: 15px;
         color: #333333;
@@ -52,7 +57,7 @@
       }
 
       .button-container {
-        padding: 0 40px 32px;
+        padding: 0 40px 12px; /* Reduced bottom padding from 32px to 12px */
         text-align: center;
       }
 
@@ -113,12 +118,52 @@
         margin: 0;
       }
 
+      .claim-items-box {
+        background-color: #f7f9fa;
+        border: 1px solid #dde5e8;
+        border-radius: 6px;
+        padding: 16px;
+        margin: 24px 0;
+      }
+
+      .claim-items-title {
+        font-size: 14px;
+        color: #1b4b5a;
+        font-weight: bold;
+        margin: 0 0 12px;
+      }
+
+      .claim-items-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .claim-items-table th {
+        background-color: #1b4b5a;
+        color: #ffffff;
+        text-align: left;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .claim-items-table td {
+        border-bottom: 1px solid #dde5e8;
+        padding: 10px;
+        font-size: 13px;
+        color: #333333;
+      }
+
+      .claim-items-table tr:last-child td {
+        border-bottom: none;
+      }
+
       @media only screen and (max-width: 600px) {
         .email-container {
           width: 100% !important;
         }
 
         .content,
+        .content-after-button,
         .footer,
         .button-container {
           padding-left: 24px !important;
@@ -171,6 +216,42 @@
                   Claims Department.
                 </p>
 
+                <div class="claim-items-box">
+                  <p class="claim-items-title">Approved Claim Items</p>
+
+                  <table
+                    class="claim-items-table"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Claim Code</th>
+                        <th>Item Name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>CLM-001</td>
+                        <td>Hospital Admission</td>
+                      </tr>
+                      <tr>
+                        <td>CLM-002</td>
+                        <td>Specialist Consultation</td>
+                      </tr>
+                      <tr>
+                        <td>CLM-003</td>
+                        <td>Prescription Medication</td>
+                      </tr>
+                      <tr>
+                        <td>CLM-004</td>
+                        <td>Radiology Services</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
                 <p class="body-text">
                   To view your claim details and track the current status of
                   your claim, please access the Claims Portal using the button
@@ -178,7 +259,6 @@
                 </p>
               </td>
             </tr>
-
             <!-- View Claim Button -->
             <tr>
               <td class="button-container">
@@ -192,9 +272,10 @@
               </td>
             </tr>
 
-            <!-- Additional Content -->
+            <!-- Additional Content - using reduced padding class -->
             <tr>
-              <td class="content">
+              <td class="content-after-button">
+                <br />
                 <p class="body-text">
                   Your claim has now completed the assessment process and the
                   approved claim details have been forwarded for further
